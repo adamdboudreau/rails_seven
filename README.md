@@ -1,7 +1,9 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Test rails setup
+
+bundle exec rails s
+bundle exec sidekiq -q default
 
 Things you may want to cover:
 

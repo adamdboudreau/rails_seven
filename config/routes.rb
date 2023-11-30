@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :jobs
   resources :test_users
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
@@ -10,4 +11,5 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "posts#index"
+  mount Sidekiq::Web, at: '/sidekiq'
 end
